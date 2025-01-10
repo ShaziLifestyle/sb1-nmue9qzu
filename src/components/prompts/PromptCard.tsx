@@ -178,7 +178,7 @@ export function PromptCard({ prompt, onDelete, onUpdate }: PromptCardProps) {
                 </div>
                 <div className={`overflow-hidden transition-all duration-200 p-2 rounded-lg
                   ${getBackgroundColor(prompt.name_complete)}
-                  ${expandedFields.name ? 'max-h-96' : 'max-h-6'}`}>
+                  ${expandedFields.name ? 'max-h-96' : 'max-h-[32px]'}`}>
                   <p className={isFullyComplete ? 'text-white/90' : 'text-gray-600'}>
                     {prompt.name}
                   </p>
@@ -215,7 +215,7 @@ export function PromptCard({ prompt, onDelete, onUpdate }: PromptCardProps) {
                 </div>
                 <div className={`overflow-hidden transition-all duration-200 p-2 rounded-lg
                   ${getBackgroundColor(prompt.content_complete)}
-                  ${expandedFields.content ? 'max-h-[500px]' : 'max-h-12'}`}>
+                  ${expandedFields.content ? 'max-h-[500px]' : 'max-h-[32px]'}`}>
                   <pre className={`whitespace-pre-wrap font-sans mt-1
                     ${isFullyComplete ? 'text-white/90' : 'text-gray-600'}`}>
                     {prompt.content}

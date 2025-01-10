@@ -166,7 +166,7 @@ export function TaskCard({ task, onDelete, onUpdate }: TaskCardProps) {
                 onChange={(checked) => handleFieldComplete('name', checked)}
                 className="mt-1"
               />
-              <div className="flex-1">
+              <div className="flex-1 mb-6">
                 <div className="flex items-center justify-between">
                   <div className={`flex-1 rounded-md transition-all duration-200 ${getLabelBackgroundColor(task.name_complete)}`}>
                     <h3 className={`font-medium px-2 py-1 ${getLabelColor(task.name_complete)}`}>
@@ -190,7 +190,7 @@ export function TaskCard({ task, onDelete, onUpdate }: TaskCardProps) {
                 </div>
                 <div className={`overflow-hidden transition-all duration-200 p-2 rounded-lg
                   ${getBackgroundColor(task.name_complete)}
-                  ${expandedFields.name ? 'max-h-96' : 'max-h-6'}`}>
+                  ${expandedFields.name ? 'max-h-96' : 'max-h-[32px]'}`}>
                   <p className={`${isFullyComplete ? 'text-white/90' : 'text-gray-600'}`}>
                     {task.name}
                   </p>
@@ -198,13 +198,13 @@ export function TaskCard({ task, onDelete, onUpdate }: TaskCardProps) {
               </div>
             </div>
             {task.description && (
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 mt-2">
                 <FieldCompletionCheckbox
                   checked={task.description_complete}
                   onChange={(checked) => handleFieldComplete('description', checked)}
                   className="mt-1"
                 />
-                <div className="flex-1">
+                <div className="flex-1 mb-4">
                   <div className="flex items-center justify-between">
                     <div className={`flex-1 rounded-md transition-all duration-200 ${getLabelBackgroundColor(task.description_complete)}`}>
                       <h4 className={`text-sm font-medium px-2 py-1 ${getLabelColor(task.description_complete)}`}>
@@ -228,8 +228,8 @@ export function TaskCard({ task, onDelete, onUpdate }: TaskCardProps) {
                   </div>
                   <div className={`overflow-hidden transition-all duration-200 p-2 rounded-lg
                     ${getBackgroundColor(task.description_complete)}
-                    ${expandedFields.description ? 'max-h-[500px]' : 'max-h-12'}`}>
-                    <pre className={`whitespace-pre-wrap font-mono text-sm mt-1 ${isFullyComplete ? 'text-white/90' : 'text-gray-600'}`}>
+                    ${expandedFields.description ? 'max-h-[500px]' : 'max-h-[32px]'}`}>
+                    <pre className={`whitespace-pre-wrap font-mono text-sm mt-1 mb-2 ${isFullyComplete ? 'text-white/90' : 'text-gray-600'}`}>
                       {task.description}
                     </pre>
                   </div>
